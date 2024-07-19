@@ -19,18 +19,18 @@
 /* Definición de fuente personalizada */
 @font-face {
     font-family: 'Exotc350';
-    src: url('../Estilo_Texto/EXOT350B.TTF') format('truetype'); /* Formato TrueType (.ttf) */
+    src: url('Estilo_Texto/EXOT350B.TTF') format('truetype'); /* Formato TrueType (.ttf) */
     font-weight: normal; /* Peso de la fuente */
     font-style: normal; /* Estilo de la fuente */
 }
 
 @font-face {
     font-family: 'Gothy';
-    src: url('../Estilo_Texto/Gothy/GOTHIC.TTF') format('truetype'); /* Formato TrueType (.ttf) */
+    src: url('Estilo_Texto/Gothy/GOTHIC.TTF') format('truetype'); /* Formato TrueType (.ttf) */
     font-weight: normal; /* Peso de la fuente */
     font-style: normal; /* Estilo de la fuente */
 }
-  
+
 /* Estilos de la página */
 body {
 
@@ -178,7 +178,7 @@ CUERPO
     overflow: hidden; /* Deshabilita todo el scroll */
 
     transition: background-image 1s ease-in-out; /* Transición suave */
-    background-image: url("../Fotos/Fondo_Compu_Inicio.jpg");
+    background-image: url("Fotos/Fondo_Compu_Inicio.jpg");
 }
 
 /* Estilo_Pagina/Estilo.css */
@@ -190,17 +190,17 @@ CUERPO
 
 /* Clase para el fondo final */
 .fondo-final {
-    background-image: url("../Fotos/Fondo_Compu_Final.jpg");
+    background-image: url("Fotos/Fondo_Compu_Final.jpg");
 }
 
 /* Clase para el encabezado con fondo */
 .header-final {
-    background-image: none;     /*url("../Alexa Web/Fotos/cabeza.png")*/
+    background-image: none;
 }
 
 /* Clase para el pie de página con fondo */
 .footer-final {
-    background-image: none;       /*url("../Alexa Web/Fotos/pies.png")*/
+    background-image: none;
 }
 
 .Tronco {
@@ -223,16 +223,6 @@ CUERPO
     gap: 100px; /* Esto añade un espacio de 10px entre cada hijo directo del contenedor .Cuerpo */
 
 }
-
-/* Ocultar scrollbar en WebKit (Chrome, Safari) *
-.Tronco::-webkit-scrollbar {
-    display: none;
-}
-/* Ocultar scrollbar en Firefox *
-.Tronco {
-    -ms-overflow-style: none;  /* IE y Edge *
-    scrollbar-width: none;  /*Firefox *
-}/* */
 
 .seccion {
     padding: 30px; /* Espaciado interno alrededor de la sección */
@@ -296,14 +286,7 @@ CUERPO
 /*Estilo de galeria cambiante*/
 /*CSS del carusel*/
 /* Contenedor principal del carrusel */
-/* .Cuerpo_Carusel{
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-
-} */
 
 /* styles.css */
 /* Multi_Menu de Galeria */
@@ -312,7 +295,7 @@ CUERPO
 .menu-container {
     margin: 20px; /* Márgenes exteriores */
 
-    background-image: url('../Fotos/Menu_Barra.png'); /* Cambia a la ruta de tu imagen */
+    background-image: url('Fotos/Menu_Barra.png'); /* Cambia a la ruta de tu imagen */
     background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -348,7 +331,6 @@ CUERPO
     position: absolute; /* Posición absoluta para el posicionamiento */
     top: 100%; /* Alinea el submenú con la parte inferior del elemento padre */
     left: 0; /* Alinea el submenú con la izquierda del elemento padre */
-    /*background-color: #f0f0f0; /* Color de fondo */
     border-radius: 5px; /* Bordes redondeados */
     padding: 0; /* Padding interno */
     list-style: none; /* Quita los puntos de la lista */
@@ -470,7 +452,6 @@ footer {
     padding: 5px; /* Espaciado interno */
     margin: 5px; /* Margen alrededor de las columnas */
     border-radius: 8px; /* Bordes redondeados */
-    /*box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra para dar efecto de elevación */
     flex: 1; /* Permite que las columnas crezcan y se encogen */
     min-width: 200px; /* Ancho mínimo de las columnas */
 
@@ -498,9 +479,8 @@ FORMATO CELULARES
 -----------------------------------------------------------
 */
 
-
 /* Media Queries para dispositivos móviles */
-@media (max-width: 480px) {
+@media (max-width: 500px) {
 
     /* CABEZA */
     header {
@@ -514,7 +494,7 @@ FORMATO CELULARES
 
     .logo-secundaria {
         width: 40px; /* Ajuste de ancho de la imagen secundaria */
-        left: 60px; /* Ajusta la posición desde el lado izquierdo */
+        left: 120px; /* Ajusta la posición desde el lado izquierdo */
     }
 
     .contenedor {
@@ -535,7 +515,7 @@ FORMATO CELULARES
     /* CUERPO */
     .Fondo {
 
-        width: 480px;        /* Establece la anchura de la pagina */
+        width: 300px;        /* Establece la anchura de la pagina */
         height: 580px;     /* Establece la altura de la pagina */
         display: flex;
         flex-direction: column;
@@ -564,10 +544,17 @@ FORMATO CELULARES
     }
 
     .Tronco {
-        width: 95%; /* Ajuste de ancho */
-        height: 60%;
+        width: 300px; /* Ajuste de ancho */
+        height: 350px;
         padding: 10px; /* Ajuste de padding */
         gap: 10px; /* Ajuste de espacio entre elementos */
+    }
+
+    .Titular {
+
+        font-size: 13px; /* Tamaño actual de las letras */
+        text-align: center; /* Alinea el texto en el centro */
+
     }
 
     .logo_Inicio { /*estilo de la foto al principio*/
@@ -579,37 +566,44 @@ FORMATO CELULARES
 
     .Foto_Titular_Los_Altos_Encontrarnos {
 
-        height: 80px;
-        width: 90%;
+        height: 50px;
+        width: 240px;
     
     }
 
     .Foto_Los_Altos {
 
-        height: 250px;
+        height: 160px;
         width: auto;
     
     }
 
     /* Carusel en modo telefono */
     .menu-container {
-        width: 100%; /* Ajuste de ancho */
+        width: 260px; /* Ajuste de ancho */
         height: 40px; /* Ajuste de alto */
+
+        margin: 0px; /* Márgenes exteriores */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-image: none; /* Cambia a la ruta de tu imagen */
     }
 
     /* Estilos para los elementos de primer nivel del menú */
     .menu > ul > li {
         display: inline-block; /* Muestra los elementos en línea */
         position: relative; /* Posición relativa para el posicionamiento de submenús */
-        margin-right: -0px; /* Márgen derecho entre elementos */
-        margin-left: -0.75px; /* Márgen izquierdo entre elementos */
+        margin-right: -0.05px; /* Márgen derecho entre elementos */
+        margin-left: -0.05px; /* Márgen izquierdo entre elementos */
     }
 
     /* Estilos para los enlaces del menú */
     .menu a {
         text-decoration: none; /* Quita la decoración de texto */
         color: rgb(75, 25, 60); /* Color del texto */
-        padding: 10px 15px; /* Padding interno */
+        padding: 0px 0px; /* Padding interno */
         display: block; /* Muestra como bloque para ocupar el ancho completo */
         /*background-color: #f0f0f0; /* Color de fondo */
         border-radius: 5px; /* Bordes redondeados */
@@ -620,7 +614,7 @@ FORMATO CELULARES
         display: flex; /* Utiliza flexbox para el diseño */
         justify-content: center; /* Centra horizontalmente los elementos */
         align-items: center; /* Centra verticalmente los elementos */
-        width: 100%; /* Ancho completo */
+        width: 200px; /* Ancho completo */
         height: 60vh; /* Altura fija, ajusta según sea necesario */
         margin-top: 20px; /* Margen superior */
     }
